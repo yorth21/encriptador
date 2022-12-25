@@ -1,0 +1,268 @@
+/* Colores */
+:root {
+    /* Dark blue */
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+    /* Light blue */
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+    /* Gray */
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+}
+
+
+body {
+    background-color: var(--light-blue-100);
+    color: var(--gray-500);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 90rem;
+    padding: 2.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.header {
+    max-width: 7.5rem;
+    width: 100%;
+}
+.header__h1 {
+    margin: 0 2.75rem 0 2.75rem;
+}
+.header__logo {}
+.header__img {}
+
+.form {
+    max-width: 42.5rem;
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+.form__textarea {
+    height: 100%;
+    margin: 6rem 0 0 0;
+
+    resize: none;
+}
+.form__alert {}
+.alert {
+    margin: 1rem 0 1rem 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.alert__icon {
+    width: 1rem;
+}
+.alert__p {
+}
+.form__btns {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    gap: 1.5rem;
+}
+.form__button {
+    width: 100%;
+    padding: 1.5rem;
+
+    border-radius: 1.5rem;
+
+    cursor: pointer;
+}
+
+.card {
+    max-width: 25rem;
+    width: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vacio {
+
+    display: flex;
+    flex-direction: column;
+}
+.vacio__img {
+    margin: 0 0 2rem 0;
+}
+.vacio__mensaje {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.vacio__problema {
+    margin: 0 0 1rem 0;
+}
+.vacio__solucion {
+}
+
+.resultado {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.resultado__p {
+    height: 100%;
+    margin: 0 0 1rem 0;
+}
+.resultado__button {
+    width: 100%;
+    padding: 1.5rem;
+
+    border-radius: 1.5rem;
+}
+
+/* Clases para activar y desactivar contenido */
+.disable {
+    display: none;
+}
+
+/* Responsive tablet */
+
+@media (max-width: 960px) {
+    .container {
+        width: 100%;
+    
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header {
+        max-width: 100%;
+        height: 7.5rem;
+        margin: 0 0 2.5rem 0;
+
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .header__h1 {
+        margin: 0;
+    }
+    
+    .form {
+        max-width: 100%;
+        padding: 2.5rem 0 2.5rem 0;
+        margin: 0 0 1.5rem 0;
+    }
+    .form__textarea {
+        margin: 2.5rem 0 0 0;
+        min-height: 36.25rem;
+    }
+    .form__btns {
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    
+    .vacio {
+        width: 100%;
+    }
+    .vacio__img {
+        display: none;
+    }
+    
+    .resultado__p {
+        margin: 0 0 2rem 0;
+    }
+
+    /* Clases para activar y desactivar contenido */
+    .disable {
+        display: none;
+    }
+}
+
+
+/* Responsive para movil */
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header {
+        max-width: 100%;
+        height: 6rem;
+        margin: 0;
+        padding: 1.5rem 1rem;
+
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .header__h1 {
+        margin: 0;
+    }
+    
+    .form {
+        max-width: 100%;
+        padding: 0 1rem;
+        margin: 0 0 4rem 0;
+    }
+    .form__textarea {
+        margin: 3.5rem 0 0 0;
+        min-height: 17.6875rem;
+    }
+
+    .card {
+        max-width: calc(100% - 2rem);
+        padding: 2rem;
+        margin: 0 1rem 0 1rem;
+    }
+    
+    .vacio {
+        max-width: 100%;
+    }
+    .vacio__img {
+        display: none;
+    }
+    
+    .resultado__p {
+        margin: 0 0 2rem 0;
+    }
+
+    /* Clases para activar y desactivar contenido */
+    .disable {
+        display: none;
+    }
+}

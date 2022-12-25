@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.svg">
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__h1">
+                <a href="#" class="header__logo">
+                    <img class="header__img" src="img/logo.svg" alt="Alura" title="Alura">
+                </a>
+            </h1>
+        </header>
+        <form class="form">
+            <textarea class="form__textarea" id="mensaje" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="form__alert alert">
+                <img class="alert__icon" src="img/info.svg" alt="Info" loading="lazy">
+                <p class="alert__p disable" id="alertText">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="form__btns">
+                <button class="form__button" onclick="encriptar(event);">Encriptar</button>
+                <button class="form__button form__button--outline" onclick="desencriptar(event);">Desencriptar</button>
+            </div>
+        </form>
+        <div class="card">
+            <div class="vacio" id="vacio">
+                <img class="vacio__img" src="img/toy.svg" alt="toy" loading="lazy">
+                <div class="vacio__mensaje">
+                    <p class="vacio__problema">Ningún mensaje fue encontrado</p>
+                    <p class="vacio__solucion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div class="resultado disable" id="resultado">
+                <p class="resultado__p" id="texto"></p>
+                <button class="resultado__button" onclick="copiarPortapapeles();">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
