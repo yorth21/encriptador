@@ -176,6 +176,7 @@ body {
 .resultado__p {
     height: 100%;
     margin: 0 0 1rem 0;
+    word-wrap: break-word;
 
     color: var(--gray-400);
 
